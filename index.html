@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta 
+    name="viewport" 
+    content="width=device-width, initial-scale=1">
+  <title>Login</title>
+  
+  <link 
+    href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    rel="stylesheet">
+  <link 
+    rel="stylesheet"
+    href="./style.css"/>
+</head>
+<body>
+  <main>
+    <h1>Login</h1>
+    
+    <form>
+      <div class=field>
+        <label for="emailInput">Email</label>
+        <input 
+          id="emailField" 
+          name="emailInput"
+          type="email"
+          placeholder="usuário@provedor"
+          pattern="[a-z-0-9](\@)[a-z](\.)[a-z]"
+          required/>
+      </div>
+      
+      <span id="emailError"></span>
+      
+      <div class="field">
+        <label for="passwdInput">Senha</label>
+        <input 
+          id="passwdField"
+          name="passwdInput"
+          type="password"
+          placeholder="senha123"
+          required/>
+        
+        <label>
+          <span 
+            id="visibleIcon"
+            class="material-icons" >visibility_off</span>
+          <input 
+            id="toggleVisible" 
+            type="checkbox"
+            value="off">
+          </input>
+        </label>
+      </div>
+      
+      <span id="passError"></span>
+      
+      <button id="loginBtn">
+        <span id="loadingIcon" class="material-icons">refresh</span>
+        <span id="loginText">Entrar</span>
+      </button>
+      <a href="#">Esqueci minha senha</a>
+    </form>
+  </main>
+  <script src="./script.js"></script>
+</body>
+</html>

@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+/* Responsive style */
+@media (max-width: 768px) { /* Small screens */
+  main {
+    font-size: 0.9em;
+    margin-top: 10vh;
+    padding: 7vw;
+  }
+  
+  h1 { margin-top: -1vh; }
+  
+  form { gap: 2vh; }
+  
+  div.field { gap: 1vw; }
+  
+  input {
+    width: 50vw;
+    max-width: 75vw;
+    min-width: 25vw;
+    height: 26px;
+  }
+  
+  button {
+    width: 40vw;
+    height: 26.5px;
+  }
+  
+  input#passwdField {
+    width: 25vw;
+    min-width: 170px;
+  }
+  
+  input#toggleVisible {
+    min-width: 7px;
+    width: 7vw;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1200px) { /* Large Screens */
+  main {
+    font-size: 1em;
+    margin: 10vh 10vw;
+    padding: 7vw;
+  }
+  
+  h1 { margin-top: -1vh; }
+  
+  form { gap: 2vh; }
+  
+  div.field { gap: 1vw; }
+  
+  input {
+    width: 50vw;
+    max-width: 75vw;
+    min-width: 25vw;
+    height: 26px;
+  }
+  
+  button {
+    width: 30vw;
+    height: 36.5px;
+  }
+  
+  input#passwdField {
+    width: 45vw;
+    min-width: 200px;
+  }
+  
+  input#toggleVisible {
+    min-width: 10px;
+    width: 10vw;
+  }
+}
+
+/* Generic style */
+main {
+  font-family: 'Lato', sans-serif;
+  text-align: center;
+  border: 0.7px solid black;
+  box-shadow: 1px 1px 5px;
+  border-radius: 2.5%;
+  letter-spacing: 0.7px;
+  background-color: #FEFEFE;
+}
+
+h1, label { color: #212121; }
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+input:focus { outline-color: #303F9F; }
+
+input#toggleVisible { display: none; }
+
+button {
+  border: none;
+  background-color: #1E88E5;
+  color: #FEFEFE;
+}
+
+button:focus {
+  color: #1E88E5;
+  background-color: white;
+  border: 1px solid #1E88E5;
+}
+
+a { color: #0097A7; }
+
+span#emailError,
+span#passError {
+  display: none;
+  color: red;
+  width: 100%;
+}
+
+span#loadingIcon {
+  display: none;
+  animation-name: loading;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+}
+
+/* Classes */ 
+div.field {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+input.input-error { border: 2px solid red; }
+
+/* animations */
+@keyframes loading {
+  0% {
+    transform: rotate(0deg);
+  }
+  
+  50% {
+    transform: rotate(90deg);
+  }
+  
+  100% {
+    transform: rotate(360deg);
+  }
+}
